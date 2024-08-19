@@ -20,7 +20,8 @@ const List = ({ todo }: TodoProps) => {
       className="flex justify-between p-4 bg-white border-l-4 border-blue-500 rounded shadow"
     >
       <span onClick={handleClick}>
-        <Link href="edit">{todo.text}</Link>
+        <Link href={`http://localhost:3000/${todo.id}`}>{todo.text}</Link>
+        {/* <Link href="edit">{todo.text}</Link> */}
       </span>
     </li>
   );

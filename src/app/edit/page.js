@@ -1,3 +1,5 @@
+// "use client";
+
 import Link from "next/link";
 // import AddTask from '../components/AddTask'
 import TodoList from "../components/TodoList";
@@ -5,6 +7,7 @@ import { getAllTodos } from "@/api";
 
 export default async function Home() {
   const todos = await getAllTodos();
+
   return (
     <>
       <div className="w-full max-w-xl mt-5">
