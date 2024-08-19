@@ -46,3 +46,12 @@ export const deleteTodo = async (id : string): Promise<Task> => {
 
     return deleteTodo;
 }
+
+export const getTodo = async (id : string ):Promise<Task> => {
+    const res = await fetch(`http://localhost:3001/tasks/${id}`,{
+        cache: "no-store",
+    });
+    const newGetTodo = res.json();
+
+    return newGetTodo;
+}
